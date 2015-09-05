@@ -1,5 +1,6 @@
 package com.keith.study.flyweight;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,17 @@ public class FlyweightTest {
 
         flyweight = factory.factory('a');
         flyweight.operation("Third");
+
+        List<Character> compositeState = new ArrayList<Character>();
+        compositeState.add('a');
+        compositeState.add('b');
+        compositeState.add('c');
+        compositeState.add('d');
+        compositeState.add('e');
+
+        FlyweightFactory flyweightFactory = new FlyweightFactory();
+        Flyweight compositeFlyweight = flyweightFactory.factory(compositeState);
+        compositeFlyweight.operation("Composite Call");
     }
 }
 
