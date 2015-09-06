@@ -14,8 +14,8 @@ public class FlyweightTest {
         Flyweight flyweight = factory.factory('a');
         flyweight.operation("First");
 
-        flyweight = factory.factory('b');
         flyweight.operation("Second");
+        flyweight = factory.factory('b');
 
         flyweight = factory.factory('a');
         flyweight.operation("Third");
